@@ -227,6 +227,8 @@ function onBeforeGameStart() {
   items['getReady'].addEventListener('click', onGameStart);
   stage.addChild(items['getReady']);
 
+  if(scoreTexts != null) scoreTexts.alpha = 0;
+
   createjs.Tween.get(items['tutorial']).to({alpha: 1}, 500);
   createjs.Tween.get(items['getReady']).to({alpha: 1}, 500);
 }
@@ -281,14 +283,18 @@ function onTick(event) {
   stage.update(event);
 }
 
+function getRandomInt(min, max) {
+  return Math.floor(Math.random() * (max - min + 1) + min);
+}
+
 function createPipes() {
   if (pipeDelay < 0) {
-    pipe = items["pipe" + _.random(1,2)].clone();
+    pipe = items["pipe" + getRandomInt(1,2)].clone();
     pipe.x = w-10;
     pipe.y = (items['ground1'].y - gap*2) * Math.random() + gap*1.5;
     pipes.addChild(pipe);
 
-    pipe2 = items["pipe" + _.random(1,2)].clone();
+    pipe2 = items["pipe" + getRandomInt(1,2)].clone();
     pipe2.scaleX = -1;
     pipe2.rotation = 180;
     pipe2.x = pipe.x;
