@@ -26,3 +26,7 @@ footer {
   footer a {
     color: white;
     text-decoration: none; }
+
+.addThisDiv {
+  margin: 0 auto;
+  width: 420px; }
