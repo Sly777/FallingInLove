@@ -7,10 +7,35 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>Falling in Love - Valentine Day Flappy Bird Clone</title>
-  <meta name="description" content="Falling in Love - Valentine Day Flappy Bird Clone">
+  <meta name="description" content="Falling in Love by Ilker Guller - Valentine Day Flappy Bird Clone - Thanks to Creator of Flappy Bird">
   <meta name="author" content="Ilker Guller">
+  <meta name="keyword" content="ilker,guller,flappy,bird,falling,love,valentine,html5,createjs,easeljs">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+  <link href='http://fonts.googleapis.com/css?family=Ceviche+One' rel='stylesheet' type='text/css'>
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+  <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+  <link rel="apple-touch-icon" sizes="57x57" href="apple-touch-icon-57x57.png" />
+  <link rel="apple-touch-icon" sizes="72x72" href="apple-touch-icon-72x72.png" />
+  <link rel="apple-touch-icon" sizes="76x76" href="apple-touch-icon-76x76.png" />
+  <link rel="apple-touch-icon" sizes="114x114" href="apple-touch-icon-114x114.png" />
+  <link rel="apple-touch-icon" sizes="120x120" href="apple-touch-icon-120x120.png" />
+  <link rel="apple-touch-icon" sizes="144x144" href="apple-touch-icon-144x144.png" />
+  <link rel="apple-touch-icon" sizes="152x152" href="apple-touch-icon-152x152.png" />
+
+  <meta name="twitter:card" content="game">
+  <meta name="twitter:site" content="@the_bluescreen">
+  <meta name="twitter:title" content="Falling in Love by Ilker Guller">
+  <meta name="twitter:description" content="Falling in Love by Ilker Guller - Valentine Day Flappy Bird Clone">
+  <meta name="twitter:creator" content="@the_bluescreen">
+  <meta name="twitter:image" content="http://fallinginlove.me/apple-touch-icon-152x152.jpg">
+
+  <meta property="og:title" content="Falling in Love by Ilker Guller" />
+  <meta property="og:type" content="game" />
+  <meta property="og:url" content="http://fallinginlove.me/" />
+  <meta property="og:image" content="http://fallinginlove.me/apple-touch-icon-152x152.jpg" />
+  <meta property="og:description" content="Falling in Love by Ilker Guller - Valentine Day Flappy Bird Clone - Thanks to Creator of Flappy Bird" />
+
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/fallinlove.css">
@@ -18,6 +43,7 @@
   <script src="js/vendor/createjs-2013.12.12.min.js"></script>
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
   <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
+  <script src="js/vendor/ndgmr.collusion.js"></script>
   <script src="js/filGame.js"></script>
 </head>
 <body onload="browserInit()">
@@ -25,9 +51,14 @@
 <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
 <![endif]-->
 
-<canvas id="cnvsFIL" width="512" height="288"></canvas>
+<canvas id="cnvsFIL" width="288" height="512"></canvas>
+
+<footer>
+  <a href="http://ilkerguller.com">Created by Ilker Guller</a><br>
+  <a href="http://twitter.com/the_bluescreen" target="_blank">Twitter</a> - <a href="http://github.com/sly777" target="_blank">Github</a>
+  - <a href="http://linkedin.com/in/ilkerg" target="_blank">Linkedin</a>
+</footer>
 
 <script src="js/plugins.js"></script>
-<script src="js/main.js"></script>
 </body>
 </html>
