@@ -1,0 +1,15 @@
+# humanstxt.org/
+# The humans responsible & technology colophon
+
+# TEAM
+
+    Ilker Guller -- Developer -- @the_bluescreen -- www.ilkerguller.com
+
+# THANKS
+
+    Creator of Flappy Bird
+
+# TECHNOLOGY COLOPHON
+
+    HTML5, CSS3
+    Normalize.css, jQuery, Modernizr

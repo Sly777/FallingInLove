@@ -1,0 +1,11 @@
+body, html {
+  margin: 0px;
+  padding: 0px;
+  text-align: center;
+  height: 100%;
+  overflow: hidden; }
+
+canvas {
+  position: relative;
+  margin-bottom: -4px;
+  z-index: 1; }
