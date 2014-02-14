@@ -7,7 +7,7 @@ var stage, isTouchEnable = true, w, h, loader, background, sprSheet,
     pipes, isGameStart = false, isHeartDead = false, masterPipeDelay = 1.75,
     pipeDelay = masterPipeDelay, gap = 80, pipe, pipe2, counter = 0, deltaS,
     animationList = {}, isRestarted = false, scoreTexts = null,
-    isJumped = false, jumpAmount = 50, jumpTime = 266;
+    isJumped = false, jumpAmount = 50, jumpTime = 266, gameMode= 'begin';
 
 document.onkeydown = handleKeyDown;
 
@@ -147,6 +147,10 @@ function onJumpPressed() {
     createjs.Tween.removeTweens(items['heart']);
     isJumped = true;
   }
+
+  if(gameMode == 'gogo') {
+    onGameStart();
+  }
 }
 
 function playGroundAnimation() {
@@ -190,6 +194,8 @@ function onCreateStartScreen() {
   items['startButton'].addEventListener('click', onBeforeGameStart);
 
   stage.addChild(items['gameName'], items['startButton'], items['credit']);
+
+  gameMode = 'startScreen';
 }
 
 function onBeforeGameStart() {
@@ -231,12 +237,16 @@ function onBeforeGameStart() {
 
   createjs.Tween.get(items['tutorial']).to({alpha: 1}, 500);
   createjs.Tween.get(items['getReady']).to({alpha: 1}, 500);
+
+  gameMode = 'gogo';
 }
 
 function onGameStart() {
+  gameMode = 'gamestarted';
   createjs.Tween.get(items['tutorial']).to({alpha: 0}, 500);
   createjs.Tween.get(items['getReady']).to({alpha: 0}, 500);
   isGameStart = true;
+  onJumpPressed();
   showScore();
 }
 
@@ -373,6 +383,7 @@ function onHeartDie() {
   createjs.Tween.get(items['startButton']).to({alpha: 1}, 500);
   isGameStart = false;
   isRestarted = true;
+  gameMode = 'end';
 }
 
 function showScore() {
